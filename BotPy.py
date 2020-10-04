@@ -24,8 +24,6 @@ def hw(message):
     
     bot.send_message(message.chat.id, hw)
 
-    bot.send_message(message.chat.id, "Не затягивай")
-
     files = os.listdir(path="files")
     if len(files) >= 4:
         hwi = open('files/photo.jpg', 'rb')
