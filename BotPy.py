@@ -6,6 +6,10 @@ import os
 
 bot = telebot.TeleBot(data.TOKEN)
 
+@bot.message_handler(commands=['команды','помощь','help'])
+def help(message):
+    bot.send_message(message.chat.id, '/дз - выводить список домашнего задания на следующий учебный день, /дистант - выводит список ближайших дистанционных занятий, /пары - выводит расписани на следующий учебный день')
+
 @bot.message_handler(commands=['Расписание','уроки','что завтра','пары'])
 def allles(message):
     allles = open('files/schedule.txt')
