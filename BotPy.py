@@ -6,7 +6,7 @@ import os
 
 bot = telebot.TeleBot(data.TOKEN)
 
-@bot.message_handler(commands=['Расписание','уроки','что завтра'])
+@bot.message_handler(commands=['Расписание','уроки','что завтра','пары'])
 def allles(message):
     allles = open('files/schedule.txt')
     bot.send_message(message.chat.id, allles)
